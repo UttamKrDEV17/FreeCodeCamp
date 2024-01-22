@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Example</title>
+        <style>
+            .box{
+                border: 2px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 45px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+                Lorem, ipsum.
+            </div>
+            <div class="box">
+                Lorem, ipsum.
+            </div>
+            <div class="box">
+                Lorem, ipsum.
+            </div>
+            <div class="box">
+                Lorem, ipsum.
+            </div>
+            <div class="box">
+                Lorem, ipsum.
+            </div>
+        </div>
+        <script>
+            console.log('javascript initializing');
+            const boxes = document.querySelectorAll('.box');
+            console.log('boxes');
+            function randomColor(){
+                let value1 = Math.floor((Math.random()*255));
+                let value2 = Math.floor((Math.random()*255));
+                let value3 = Math.floor((Math.random()*255));
+                return `rgb(${value1},${value2},${value3})`;
+            }
+            for(var i=0;i<boxes.length;i++){
+                boxes[i].style.backgroundColor = randomColor();
+            }
+        </script>
+    </body>
+</html>
